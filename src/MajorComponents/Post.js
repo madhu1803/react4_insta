@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Card, Form } from "react-bootstrap";
+import { Card, FormControl, InputGroup } from "react-bootstrap";
 import Logo from "../Components/Logo";
 import Comments from "../Components/Comments";
 import "../Components/Css/Post.css";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillTag } from "react-icons/ai";
 import { FiSend, FiMessageCircle } from "react-icons/fi";
 
 export default class Post extends Component {
@@ -21,9 +21,10 @@ export default class Post extends Component {
           />
           <Card.Body>
             <Card.Title>
-              <AiOutlineHeart />
-              <FiMessageCircle />
-              <FiSend />
+              <AiOutlineHeart className="m-1" />
+              <FiMessageCircle className="m-1" />
+              <FiSend className="m-1" />
+              <AiFillTag className="m-1" style={{ float: "right" }} />
             </Card.Title>
             <p>
               Liked by <strong>sruthi</strong> and <strong>6 others</strong>
@@ -32,11 +33,12 @@ export default class Post extends Component {
             <Comments text="nice" author="madhu" />
             <Comments text="cute" author="sang" />
             <Comments text="hello" author="am" />
-            <Form.Control
-              type="text"
-              placeholder="Add Comment.."
-              className="mt-3"
-            />
+            <InputGroup className="mb-3">
+              <FormControl placeholder="Add a Comment" />
+              <InputGroup.Append>
+                <InputGroup.Text id="basic-addon2">Post</InputGroup.Text>
+              </InputGroup.Append>
+            </InputGroup>
           </Card.Body>
         </Card>
       </div>

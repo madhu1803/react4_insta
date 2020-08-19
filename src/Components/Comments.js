@@ -8,7 +8,8 @@ export default class Comments extends Component {
     return (
       <Card.Text>
         <p className="mt-2">
-          <strong>{author}</strong> {text} <AiOutlineHeart />
+          <strong>{author}</strong> {text}{" "}
+          <AiOutlineHeart style={{ float: "right" }} />
         </p>
       </Card.Text>
     );
