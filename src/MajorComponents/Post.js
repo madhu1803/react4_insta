@@ -9,7 +9,7 @@ import { FiSend, FiMessageCircle } from "react-icons/fi";
 export default class Post extends Component {
   render() {
     return (
-      <div class="container">
+      <div class="container mb-3">
         <Card>
           <Logo
             text="mokkapostu"
