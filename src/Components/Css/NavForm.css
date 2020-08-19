@@ -1,0 +1,33 @@
+.nav-form {
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .nav-form {
+        position: relative;
+        margin-right: 90px;
+    }
+
+}
+
+.navform-icon {
+    color: #6c757d;
+    position: absolute;
+    left: 55px;
+}
+
+input {
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    padding-left: 18px;
+    font-size: 14px;
+}
+
+:-moz-placeholder {
+    text-align: center;
+    padding-left: 18px;
+    font-size: 14px;
+}

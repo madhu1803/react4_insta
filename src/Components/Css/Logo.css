@@ -1,0 +1,29 @@
+.logo-container {
+    position: relative;
+}
+
+.logo-container .logo-img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.logo-container .text {
+    position: absolute;
+    top: 15px;
+    font-size: 13px !important;
+}
+
+
+.logo-container .sub-text {
+    position: absolute;
+    top: 36px;
+    left: 70px;
+    font-size: 10px !important;
+}
+
+.follow-tag {
+    font-size: 10px !important;
+    position: absolute;
+    left: 230px;
+    top: 17px;
+}

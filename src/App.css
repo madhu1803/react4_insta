@@ -1,0 +1,10 @@
+.navbar-container {
+  border-bottom: 1px solid lightgray !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-container .navbar-header {
+    padding-left: 250px;
+  }
+
+}
