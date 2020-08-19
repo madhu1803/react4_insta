@@ -8,7 +8,7 @@ export default class NavForm extends Component {
       <div class="form-inline my-2 my-lg-0 nav-form">
         <Icon className="navform-icon" />
         <input
-          class="form-control mr-sm-2"
+          class="form-control mr-sm-2 search-input"
           type="search"
           placeholder="Search"
           aria-label="Search"
