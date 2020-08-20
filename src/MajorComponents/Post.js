@@ -7,6 +7,9 @@ import { AiOutlineHeart, AiFillTag } from "react-icons/ai";
 import { FiSend, FiMessageCircle } from "react-icons/fi";
 
 export default class Post extends Component {
+  state = {
+    comments: ["hello", "nice", "cool", "bye", "xo"],
+  };
   render() {
     return (
       <div class="container mb-3">
@@ -30,9 +33,11 @@ export default class Post extends Component {
               Liked by <strong>sruthi</strong> and <strong>6 others</strong>
             </p>
             <a href="#">View all 4 comments</a>
-            <Comments text="nice" author="madhu" />
-            <Comments text="cute" author="sang" />
-            <Comments text="hello" author="am" />
+
+            {this.state.comments.map((item) => (
+              <Comments text={item} author="madhu" />
+            ))}
+
             <InputGroup className="mb-3">
               <FormControl placeholder="Add a Comment" />
               <InputGroup.Append>
