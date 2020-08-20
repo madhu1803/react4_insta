@@ -12,19 +12,18 @@ export default class Post extends Component {
     newComment: "",
   };
 
-  // handleKeyPress = (e) => {
-  //   if (e.key === "Enter") {
-  //     this.setState({
-  //       comments: this.state.comments.concat(e.target.value),
-  //     });
-  //   }
-  // };
-
-  handleChange(e) {
-    console.log(e.target.value);
+  handleChange = (e) => {
     this.setState({ newComment: e.target.value });
     console.log(this.state.newComment);
-  }
+  };
+
+  PostHandler = () => {
+    this.setState({
+      ...this.state,
+      comments: this.state.comments.concat(this.state.newComment),
+      newComment: "",
+    });
+  };
 
   render() {
     return (
@@ -57,7 +56,7 @@ export default class Post extends Component {
             <InputGroup className="mb-3">
               <FormControl
                 placeholder="Add a Comment"
-                value={this.state.value}
+                value={this.state.newComment}
                 onChange={(e) => this.handleChange(e)}
               />
               <InputGroup.Append>
