@@ -9,7 +9,23 @@ import { FiSend, FiMessageCircle } from "react-icons/fi";
 export default class Post extends Component {
   state = {
     comments: ["hello", "nice", "cool", "bye", "xo"],
+    newComment: "",
   };
+
+  // handleKeyPress = (e) => {
+  //   if (e.key === "Enter") {
+  //     this.setState({
+  //       comments: this.state.comments.concat(e.target.value),
+  //     });
+  //   }
+  // };
+
+  handleChange(e) {
+    console.log(e.target.value);
+    this.setState({ newComment: e.target.value });
+    console.log(this.state.newComment);
+  }
+
   render() {
     return (
       <div class="container mb-3">
@@ -39,9 +55,15 @@ export default class Post extends Component {
             ))}
 
             <InputGroup className="mb-3">
-              <FormControl placeholder="Add a Comment" />
+              <FormControl
+                placeholder="Add a Comment"
+                value={this.state.value}
+                onChange={(e) => this.handleChange(e)}
+              />
               <InputGroup.Append>
-                <InputGroup.Text id="basic-addon2">Post</InputGroup.Text>
+                <InputGroup.Text onClick={this.PostHandler}>
+                  Post
+                </InputGroup.Text>
               </InputGroup.Append>
             </InputGroup>
           </Card.Body>
